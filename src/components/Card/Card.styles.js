@@ -2,9 +2,7 @@ import styled from "@emotion/styled/macro";
 import * as colors from "../../styles/colors";
 import * as fonts from "../../styles/fonts";
 
-export const StyledCard = styled.div({
-  textAlign: "center",
-});
+export const StyledCard = styled.div({});
 
 export const StyledTitle = styled.h3({
   fontFamily: fonts.primary,
@@ -14,10 +12,9 @@ export const StyledTitle = styled.h3({
   lineHeight: "28px",
   textAlign: "center",
   textTransform: "uppercase",
+  maxWidth: "180px",
+  margin: "0 auto 24px auto",
   color: colors.secondaryHovered,
-  padding: "24px",
-  width: "180px",
-  margin: "0 auto"
 });
 
 export const StyledParagraph = styled.p({
@@ -28,17 +25,16 @@ export const StyledParagraph = styled.p({
   lineHeight: "26px",
   textAlign: "center",
   color: colors.secondary,
-  margin: "0 auto 64px auto",
-  width: "327px",
+  marginBottom: "64px",
 });
 
 export const StyledImg = styled.div({
   background: colors.primary,
-  width: "65px",
-  height: "65px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
   borderRadius: "16px",
+  maxWidth: "65px",
+  minHeight: "65px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   margin: "0 auto 48px auto",
 });

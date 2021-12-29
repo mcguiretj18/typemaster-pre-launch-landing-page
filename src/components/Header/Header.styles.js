@@ -1,11 +1,10 @@
 import styled from "@emotion/styled/macro";
+import * as bp from '../../styles/breakpoints';
 
 export const StyledHeader = styled.header({
-  width: "87%",
-  height: "48px",
-  padding: "24px 6.5% 64px 6.5%",
-  color: "#FFF",
+  margin: '24px 0 64px 0',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  maxWidth: bp.maxWidth,
+  gap: '8.5em'
 });

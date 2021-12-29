@@ -1,5 +1,5 @@
 /** @jsx jsx */ /** @jsxRuntime classic */
-import { jsx } from "@emotion/react";
+import { Global, jsx } from "@emotion/react";
 import "./App.css";
 import { Header, Headline, Footer, Card } from "./components";
 import keyboardImage from "./assets/mobile/image-keyboard.jpg";
@@ -9,70 +9,70 @@ import compatibleIcon from "./assets/shared/icon-compatible.svg";
 import bluetoothIcon from "./assets/shared/icon-bluetooth.svg";
 import batteryIcon from "./assets/shared/icon-battery.svg";
 import lightIcon from "./assets/shared/icon-light.svg";
+import * as fonts from "./styles/fonts";
+import * as colors from "./styles/colors";
 
 function App() {
   return (
-    <div css={{ overflowX: "hidden" }}>
+    <div css={{ padding: "0 24px", overflow: "hidden" }}>
+      <Global />
       <Header />
       <Headline />
       <img
         css={{
-          width: "372px",
-          transform: "translateX(24px)",
-          borderRadius: "24px",
+          maxWidth: "372px",
           marginBottom: "24px",
+          borderRadius: "24px",
         }}
         src={keyboardImage}
         alt="Keyboard"
       />
       <div
         css={{
-          transform: "translateX(-22px)",
-          paddingBottom: "75px",
           display: "flex",
+          transform: "translateX(-46px)",
+          gap: "24px",
+          marginBottom: "75px",
         }}
       >
         <img
-          css={{ width: "129px", marginRight: "24px", borderRadius: "24px" }}
+          css={{ maxWidth: "129px", height: "auto", borderRadius: "24px" }}
           src={phoneKeyboardImage}
           alt="Phone & Keyboard"
         />
         <img
-          css={{ width: "220px", borderRadius: "24px" }}
+          css={{ maxWidth: "220px", height: "auto", borderRadius: "24px" }}
           src={glassKeyboardImage}
           alt="Glass & Keyboard"
         />
       </div>
-      <div css={{ paddingBottom: "111px" }}>
+      <div>
         <h2
           css={{
-            fontFamily: "Barlow, sans-serif",
+            fontFamily: fonts.primary,
             fontStyle: "normal",
             fontWeight: 900,
             fontSize: "32px",
             lineHeight: "36px",
             textAlign: "center",
             textTransform: "uppercase",
-            color: "#162542",
-            width: "255px",
-            padding: "0 60px 24px 60px",
+            color: colors.secondaryHovered,
+            maxWidth: "255px",
+            margin: "0 auto 24px auto"
           }}
         >
           mechanical wireless Keyboard
         </h2>
-        <p
-          css={{
-            fontFamily: "Barlow, sans-serif",
-            fontStyle: "normal",
-            fontWeight: 500,
-            fontSize: "16px",
-            lineHeight: "26px",
-            textAlign: "center",
-            color: "#7B8BAD",
-            width: "327px",
-            padding: "0 24px 0 24px",
-          }}
-        >
+        <p css={{
+          fontFamily: fonts.primary,
+          fontStyle: 'normal',
+          fontWeight: 500,
+          fontSize: '1rem',
+          lineHeight: '26px',
+          textAlign: 'center',
+          color: colors.secondary,
+          marginBottom: '111px'
+        }}>
           The Typemaster keyboard boasts top-notch build and practical design.
           It offers a wide variety of switches and keycaps, along with reliable
           wireless connectivity.

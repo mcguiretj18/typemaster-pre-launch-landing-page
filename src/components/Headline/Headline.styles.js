@@ -1,42 +1,41 @@
 import styled from "@emotion/styled/macro";
 import * as fonts from "../../styles/fonts";
 import * as colors from "../../styles/colors";
+import * as bp from "../../styles/breakpoints";
 
 export const StyledHeadline = styled.div({
-  padding: "0 24px 0 24px",
+  marginBottom: '64px'
 });
 
 export const StyledTitle = styled.h1({
-  fontFamily: fonts.primary,
-  fontStyle: "normal",
   fontWeight: 900,
+  fontStyle: "normal",
+  maxWidth: bp.maxWidth,
   fontSize: "48px",
   lineHeight: "48px",
   textTransform: "uppercase",
   color: colors.secondaryHovered,
-  padding: "32px 0",
 });
 
 export const StyledContent = styled.p({
-  margin: 0,
+  margin: "32px 0",
   fontFamily: fonts.primary,
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: "1rem",
   lineHeight: "26px",
   color: colors.secondary,
-  paddingBottom: "32px",
+  maxWidth: bp.maxWidth,
 });
 
 export const StyledActions = styled.div({
   display: "flex",
   alignItems: "center",
-  padding: "0 0 32px 0",
+  gap: "3.125em",
   "& h3": {
-    paddingLeft: "32px",
     fontFamily: fonts.primary,
     fontStyle: "normal",
-    fontWeight: "bold",
+    fontWeight: 700,
     fontSize: "1rem",
     lineHeight: "26px",
     textTransform: "uppercase",
